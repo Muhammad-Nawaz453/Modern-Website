@@ -1,5 +1,10 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react-hooks/exhaustive-deps */
+
+
 import logoImage from '@/assets/images/logo.svg'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const footerLinks = [
     { href: "#", label: "Contact" },
@@ -17,7 +22,7 @@ export default function Footer() {
                 <div>
                     <nav className='flex gap-6'>
                         {footerLinks.map(link =>(
-                             <a href={link.href} className='text-white/50 text-sm'>{link.label}</a>
+                             <Link  href={link.href} className='text-white/50 text-sm'>{link.label}</Link>
                         ))}
                     </nav>
                 </div>

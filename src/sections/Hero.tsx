@@ -1,3 +1,7 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react-hooks/exhaustive-deps */
+
+
 "use client"
 import Button from "@/components/button";
 import designExample1Image from '@/assets/images/design-example-1.png'
@@ -43,7 +47,7 @@ export default function Hero() {
         cursor: `url(${cursorYouImage.src}), auto`
      }}
      >
-        <div className="container relative">
+              <div className="container relative">
             <motion.div ref={leftDesignScope} initial={ {opacity: 0, y:100, x:-100} } drag className="absolute -left-32 top-16 hidden lg:block">
                 <Image src={designExample1Image} draggable='false' alt="" />
             </motion.div>
